@@ -1,0 +1,41 @@
+.Header h1 {
+  background: rgb(10, 10, 226);
+  color: white;
+  padding: 20px;
+}
+
+
+.student-form {
+  background: white;
+  padding: 20px;
+}
+.app {
+  width: 700px;
+  margin: auto;
+  font-family: Arial;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+}
+
+.student-card {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-top: 10px;
+}
