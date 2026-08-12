@@ -1,21 +1,49 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import StudentForm from './components/StudentForm';
-import StudentList from './components/StudentList';
+
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import RegisterStudent from './pages/RegisterStudent';
+import StudentList from './pages/StudentList';
+import About from './pages/About';
+
 import './App.css';
 
 function App() {
+  // State to store all registered students
   const [students, setStudents] = useState([]);
 
+  // Function to add a new student
   const addStudent = (student) => {
-    setStudents([...students, student]);
+    setStudents((prevStudents) => [...prevStudents, student]);
   };
 
   return (
-    <div className="app">
-      <h1>Student Registration Form</h1>
-      <StudentForm addStudent={addStudent} />
-      <StudentList students={students} />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+
+      <div className="container">
+        <Routes>
+          {/* Home Page */}
+          <Route path="/" element={<Home />} />
+
+          {/* Register Student Page */}
+          <Route
+            path="/register"
+            element={<RegisterStudent addStudent={addStudent} />}
+          />
+
+          {/* Student List Page */}
+          <Route
+            path="/students"
+            element={<StudentList students={students} />}
+          />
+
+          {/* About Page */}
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
