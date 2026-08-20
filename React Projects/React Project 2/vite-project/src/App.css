@@ -1,0 +1,49 @@
+.expense-container {
+    width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.expense-container h1 {
+    text-align: center;
+}
+
+.expense-container h2 {
+    margin-top: 20px;
+}
+
+.expense-container label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.expense-container input,
+.expense-container select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.expense-container button {
+    margin: 15px 15px 15px 0;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.expense-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.expense-container th,
+.expense-container td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
